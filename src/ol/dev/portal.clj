@@ -22,7 +22,7 @@
   (atom nil))
 
 (defn close-portals [m]
-  (->> m vals (filter some?) ((requiring-resolve 'portal.api/close))))
+  (->> m vals (filter some?) (map (requiring-resolve 'portal.api/close)) doall))
 
 (defn open-portals
   "Open the portals and set up the tap handlers.
@@ -38,8 +38,7 @@
                             :portal.viewer/inspector}))
         submit (portal-repl/make-submit :transforms portal-repl/recommended-transforms
                                         :tap-routing (partial tap-routing noisy-taps my-taps))]
-    (when (-> @portal-state :portals)
-      (close-portals (:portals @portal-state)))
+    (close-portals (:portals @portal-state))
     (reset! portal-state
             {:taps {:my-taps my-taps
                     :noisy-taps noisy-taps}
@@ -66,6 +65,8 @@
 (comment
 
   (open-portals)
+
+  (close-portals (:portals @portal-state))
 
   ;; goes to my-taps
   (tap> :test)
