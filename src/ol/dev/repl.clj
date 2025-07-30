@@ -38,25 +38,6 @@
         (catch Throwable _))
       (log*-fn logger level throwable message))))
 
-(defn- logging4j2*adapter [log-star]
-  (let [log*-fn (deref log-star)]
-    (fn [logger level & more]
-      (let [[throwable message-parts]
-            ;; drop marker if present; find throwable and everything else:
-            (cond (instance? Throwable (first more))
-                  [(first more) (rest more)]
-                  (instance? Throwable (second more))
-                  [(second more) (rest (rest more))]
-                  :else
-                  [nil more])
-            message (str/join " " message-parts)]
-        (try
-          (let [^StackTraceElement frame (nth (.getStackTrace (Throwable. "")) 3)]
-            (tap>log frame (-> level str str/lower-case keyword)
-                     throwable message))
-          (catch Throwable _))
-        (apply log*-fn logger level more)))))
-
 (defn -main
   "If Jedi Time is on the classpath, require it (so that Java Time
   objects will support datafy/nav).
@@ -99,19 +80,6 @@
        log-star
        (constantly (ctl-log*adapter log-star))))
     (println "clojure.tools.logging will be tap>'d...")
-    (catch Throwable _))
-
-  ;; if Portal and logging4j2 are both present,
-  ;; cause all (successful) logging to also be tap>'d:
-  (try
-    ;; if we have Portal on the classpath...
-    (require 'portal.console)
-    ;; ...then install a tap> ahead of logging4j2:
-    (let [log-star (requiring-resolve 'org.corfield.logging4j2.impl/log*)]
-      (alter-var-root
-       log-star
-       (constantly (logging4j2*adapter log-star))))
-    (println "org.corfield.logging4j2 will be tap>'d...")
     (catch Throwable _))
 
   ;; select and start a main REPL:

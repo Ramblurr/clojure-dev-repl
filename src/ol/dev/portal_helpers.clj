@@ -122,10 +122,6 @@
         (portal.api/submit v')))))
 
 (defn make-submit [& {:keys [transforms tap-routing]}]
-  (when transforms
-    (assert (var? transforms) "make-submit: transforms must be a var for reloading to work"))
-  (when tap-routing
-    (assert (var? tap-routing) "make-submit: tap-routing must be a var for reloading to work"))
   (submit* :transforms transforms :tap-routing tap-routing))
 
 ;; --------------------------------------------------------------------------------------------

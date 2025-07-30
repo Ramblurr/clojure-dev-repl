@@ -6,6 +6,14 @@ The purpose is to be able to start a repl wherever I am with my preferred middle
 
 It pairs with [my ~/.config/clojure.deps](https://github.com/Ramblurr/nixcfg/blob/main/modules/dev/clojure/configs/deps.edn).
 
+## Portal usage
+
+``` clojure
+(require '[ol.dev.portal])
+(ol.dev.portal/open-portals)
+```
+
+
 ## License: European Union Public License 1.2
 
 Copyright © 2025 Casey Link <unnamedrambler@gmail.com>
