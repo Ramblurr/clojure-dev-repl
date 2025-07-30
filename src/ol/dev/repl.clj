@@ -102,11 +102,12 @@
                    (str " with " (str/join ", " (map first middleware)))))
             (let [nrepl (requiring-resolve 'nrepl.cmdline/-main)]
               (fn []
-                (apply nrepl mw-args)))]
+                (apply nrepl (concat mw-args args))))]
            (catch Throwable _))
             ;; fallback to plain REPL:
          ["clojure.main" (resolve 'clojure.main/main)])]
     (println "Starting" repl-name "as the REPL...")
+    (println (str/join " " (concat mw-args args)))
     (repl-fn)
     ;; ensure a smooth exit after the REPL is closed
     (System/exit 0)))
