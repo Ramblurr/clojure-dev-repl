@@ -1,0 +1,47 @@
+{:paths []
+ :tasks {:requires
+         ([clojure.string :as str]
+          [babashka.tasks :refer [shell]])
+
+         :init
+         (do
+           (def paths ["src" "test"])
+           (def lint-config "{:linters {:unresolved-namespace {:exclude [ansi portal.api]}}}"))
+
+         test
+         {:doc  "Run tests"
+          :task (apply shell "clojure" "-M:test" *command-line-args*)}
+
+         fmt
+         {:doc  "Format code with cljfmt"
+          :task (apply shell "cljfmt --quiet -v fix" (if (seq *command-line-args*) *command-line-args* paths))}
+
+         fmt:check
+         {:doc  "Check code formatting"
+          :task (apply shell "cljfmt check" paths)}
+
+         prep
+         {:doc  "Prepare Clojure dependencies"
+          :task (shell "clojure -X:deps prep :aliases '[:test]'")}
+
+         deps-tree
+         {:doc  "Show dependency tree"
+          :task (shell "clojure -X:deps tree :aliases '[:test]'")}
+
+         lint:copy-configs
+         {:doc  "Copy clj-kondo configs from dependencies"
+          :task (shell "clj-kondo" "--lint" (-> (shell {:out :string} "clojure -Spath -M:test") :out str/trim) "--dependencies" "--copy-configs" "--skip-lint")}
+
+         lint
+         {:doc  "Lint code with clj-kondo"
+          :task (if (seq *command-line-args*)
+                  (apply shell "clj-kondo" "--config" lint-config "--lint" *command-line-args*)
+                  (apply shell "clj-kondo" "--config" lint-config "--lint" paths))}
+
+         qa
+         {:doc     "Run format, lint, and tests"
+          :depends [fmt lint test]}
+
+         ci
+         {:doc     "Run CI checks"
+          :depends [test fmt:check lint]}}}
