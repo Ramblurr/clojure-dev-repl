@@ -21,6 +21,56 @@
   portal-state
   (atom nil))
 
+(defn- tap-atom [tap-key]
+  (or (get-in @portal-state [:taps tap-key])
+      (throw (ex-info "Portal taps are not initialized. Call `open-portals` first."
+                      {:tap-key tap-key}))))
+
+(defn my-taps
+  "Returns the atom containing regular `tap>` values."
+  []
+  (tap-atom :my-taps))
+
+(defn noisy-taps
+  "Returns the atom containing logging, middleware, and nREPL `tap>` values."
+  []
+  (tap-atom :noisy-taps))
+
+(defn logs
+  "Queries the regular tap log.
+
+  Usage:
+
+  ```clojure
+  (logs)
+  (logs 5)
+  (logs :label)
+  (logs :label 3)
+  ```"
+  ([] @(my-taps))
+  ([n-or-label]
+   (if (number? n-or-label)
+     (vec (take-last n-or-label @(my-taps)))
+     (vec (filter #(= n-or-label (first %)) @(my-taps)))))
+  ([label n]
+   (vec (take-last n (filter #(= label (first %)) @(my-taps))))))
+
+(defn log-values
+  "Returns only the `:value` entries from [[logs]]."
+  ([] (mapv :value @(my-taps)))
+  ([n-or-label] (mapv :value (logs n-or-label)))
+  ([label n] (mapv :value (logs label n))))
+
+(defn clear-logs!
+  "Clears the regular tap log."
+  []
+  (reset! (my-taps) []))
+
+(defn last-log
+  "Returns the most recent regular tap entry, or its `:value` with any argument."
+  ([] (last @(my-taps)))
+  ([_] (:value (last @(my-taps)))))
+
 (defn close-portals [m]
   (->> m vals (filter some?) (map (requiring-resolve 'portal.api/close)) doall))
 
