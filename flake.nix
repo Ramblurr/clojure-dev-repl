@@ -6,15 +6,15 @@
     devshell.inputs.nixpkgs.follows = "nixpkgs";
     devenv.url = "https://flakehub.com/f/ramblurr/nix-devenv/*";
     devenv.inputs.nixpkgs.follows = "nixpkgs";
-    clojure-nix-locker.url = "github:bevuta/clojure-nix-locker";
-    clojure-nix-locker.inputs.nixpkgs.follows = "nixpkgs";
+    clj-helpers.url = "github:outskirtslabs/clojure-nix-locker-helpers";
+    clj-helpers.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     inputs@{
-      clojure-nix-locker,
       self,
       devenv,
       devshell,
+      clj-helpers,
       ...
     }:
     let
@@ -22,16 +22,11 @@
       mkClojure = pkgs: pkgs.clojure.override { jdk = pkgs.${jdk}; };
       mkLocker =
         pkgs:
-        let
-          clojure = mkClojure pkgs;
-          lockerPkgs = pkgs // {
-            inherit clojure;
-          };
-        in
-        (import "${clojure-nix-locker}/default.nix" { pkgs = lockerPkgs; }).lockfile {
+        clj-helpers.lib.mkLockfile {
+          inherit pkgs;
+          jdk = pkgs.${jdk};
           src = ./.;
           lockfile = "./deps-lock.json";
-          extraPrepInputs = [ pkgs.git ];
         };
       lockerCommand =
         pkgs:
@@ -105,7 +100,6 @@
           packages = [
             self.packages.${pkgs.system}.locker
           ];
-
         };
     };
 }
