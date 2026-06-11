@@ -7,11 +7,11 @@
     "aero/aero/1.1.6/aero-1.1.6.pom": {
       "sha256": "5945cf8ead780f7497e86f298963f278681d519ae9b21be949fac5420f05d350"
     },
-    "com/cognitect/transit-clj/1.0.333/transit-clj-1.0.333.jar": {
-      "sha256": "8e0352a002cf95ddeb52770b950c1eb5ea96b7351fce39e0fee93e21ca63befb"
+    "com/cognitect/transit-clj/1.1.357/transit-clj-1.1.357.jar": {
+      "sha256": "a9fc682e189acf3f3f1a1d739d25291d233345d31c2326f89cf3a752f8dcc55a"
     },
-    "com/cognitect/transit-clj/1.0.333/transit-clj-1.0.333.pom": {
-      "sha256": "876ba5387d847ca335447ea34adf542b17d1b07748ecbdc901a870bfcc77a833"
+    "com/cognitect/transit-clj/1.1.357/transit-clj-1.1.357.pom": {
+      "sha256": "1cb0209dff77846e5b45c523b7308b435cfc7db1e0c457f6df8fac30c50289ec"
     },
     "com/cognitect/transit-cljs/0.8.280/transit-cljs-0.8.280.jar": {
       "sha256": "157ad4c30e416214c29997baf26ded277d05c4b43219677d2b1003c801681c1a"
@@ -19,11 +19,11 @@
     "com/cognitect/transit-cljs/0.8.280/transit-cljs-0.8.280.pom": {
       "sha256": "da2dc42451a742b77700506ac9f42117a8c31f44688788c0e120cec7c9545da9"
     },
-    "com/cognitect/transit-java/1.0.371/transit-java-1.0.371.jar": {
-      "sha256": "9267acceaa6bc8e89d5cbf65f847838647876d721af208324e38cd0040b23696"
+    "com/cognitect/transit-java/1.1.403/transit-java-1.1.403.jar": {
+      "sha256": "07744f8931188516837c36ff8bec87a14de0f3c6d67a80b2c82ff620ebed218f"
     },
-    "com/cognitect/transit-java/1.0.371/transit-java-1.0.371.pom": {
-      "sha256": "073f55f4f01fc2a77b2b51b9403ec5609b4b0bf0ae1dbcebc48e223744c97bbf"
+    "com/cognitect/transit-java/1.1.403/transit-java-1.1.403.pom": {
+      "sha256": "6016ecea6b11b2360c6d294ef55013d2268c3c39ae01c99128549411751afdff"
     },
     "com/cognitect/transit-js/0.8.874/transit-js-0.8.874.jar": {
       "sha256": "ad6e4bd2d695565da79eb58020c9665d22850d6b39cb86f8330bb6da3bbf0909"
@@ -31,23 +31,23 @@
     "com/cognitect/transit-js/0.8.874/transit-js-0.8.874.pom": {
       "sha256": "27bc96e2af9c9fae9b585d100074532e9f45459f51dd0609039d138c7aad51b8"
     },
-    "com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.jar": {
-      "sha256": "b5d37a77c88277b97e3593c8740925216c06df8e4172bbde058528df04ad3e7a"
+    "com/fasterxml/jackson/core/jackson-core/2.21.1/jackson-core-2.21.1.jar": {
+      "sha256": "1edd5f2e49dca5f8e4519957c24b7b3050bd1c7ee883920da33cff031ff1f7c0"
     },
-    "com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.pom": {
-      "sha256": "f44cc63d612f03b1dbfc82892dcdb32fdb75bf16049fd8595561e7c7a33bc451"
+    "com/fasterxml/jackson/core/jackson-core/2.21.1/jackson-core-2.21.1.pom": {
+      "sha256": "0f3fb5eb9e8970449ac0cb98e2f8e7b513d2d4ec5b1a4f02e22778e4f7bab8d7"
     },
-    "com/fasterxml/jackson/jackson-base/2.14.2/jackson-base-2.14.2.pom": {
-      "sha256": "3ae245b9df95127321f1f905f703bd32774fe557158a9d3a9e507d82b2bc4ed4"
+    "com/fasterxml/jackson/jackson-base/2.21.1/jackson-base-2.21.1.pom": {
+      "sha256": "60d4eb66a000a33fa37e7cb51e2550dabe7467a0b8ac60806d7d3ba9728ccd64"
     },
-    "com/fasterxml/jackson/jackson-bom/2.14.2/jackson-bom-2.14.2.pom": {
-      "sha256": "9aa209bb32391cbf5f1bd3e7fa11901676169acd190d9896b5c1e877c999febc"
+    "com/fasterxml/jackson/jackson-bom/2.21.1/jackson-bom-2.21.1.pom": {
+      "sha256": "8d7c78dde10f4d08e7296cef084cf30b77adcea7a36e23d1520793fdec63ff28"
     },
-    "com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom": {
-      "sha256": "0906add855ae39f92357d63f485889b08fca4c43a5fe433522d75344e0757b19"
+    "com/fasterxml/jackson/jackson-parent/2.21/jackson-parent-2.21.pom": {
+      "sha256": "3851df627faeb46887b956104630b74a8bbb5f7de22e974cf15982e20e0373de"
     },
-    "com/fasterxml/oss-parent/48/oss-parent-48.pom": {
-      "sha256": "11bba22d8631816e09b623a200747453d6491a66eac8f5c089c73da2b749014f"
+    "com/fasterxml/oss-parent/75/oss-parent-75.pom": {
+      "sha256": "fcbbf1c18c9047e6917d384f2064e21b42a58fc85fb0523a9e2e015eff7c619d"
     },
     "com/google/code/gson/gson-parent/2.10.1/gson-parent-2.10.1.pom": {
       "sha256": "4248e0882426c615182385d6086c3ef3262e769957189e29306280b85482b833"
@@ -58,12 +58,6 @@
     "com/google/code/gson/gson/2.10.1/gson-2.10.1.pom": {
       "sha256": "d2b115634f5c085db4b9c9ffc2658e89e231fdbfbe2242121a1cd95d4d948dd7"
     },
-    "com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar": {
-      "sha256": "4e69696892b88b41c55d49ab2fdcc21eead92bf54acc588c0050596c3b75199c"
-    },
-    "com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.pom": {
-      "sha256": "665f63590defb63d62add21d3525362cf937cf6a1c05e4b0145bae8da8a57f83"
-    },
     "com/nextjournal/beholder/1.0.2/beholder-1.0.2.jar": {
       "sha256": "89038c4db89d203bb5b12a5fb1adaa9295e05a2ac4b24faed996c934ea89d17a"
     },
@@ -73,11 +67,11 @@
     "com/sun/activation/all/1.2.0/all-1.2.0.pom": {
       "sha256": "1d8518e3ac7532a104e4f7be77def37c982e530723c6bdb3d67708cce2b0c2c4"
     },
-    "djblue/portal/0.64.1/portal-0.64.1.jar": {
-      "sha256": "c3c4e18e6c14d55858930fc7e7122aa8e89a3a1b18ecbf00a9d60b1eec30e282"
+    "djblue/portal/0.65.0/portal-0.65.0.jar": {
+      "sha256": "92cdd3f72489642d5235b2d8d0e3af5db12d39298360b9c752a507701da97f08"
     },
-    "djblue/portal/0.64.1/portal-0.64.1.pom": {
-      "sha256": "c311a47c2082b784a2c73bedaf7848f60d203b003fc21ab45ea9eecfa6b3f573"
+    "djblue/portal/0.65.0/portal-0.65.0.pom": {
+      "sha256": "067a6fc860238bd09bae1e34f38d1b9e05c1a4706f1e53f22c8140fde56c4781"
     },
     "expound/expound/0.9.0/expound-0.9.0.jar": {
       "sha256": "d6a372609918e0351bfa6a8bd693d18bc199e8ba7aafaec11e895afae018f95c"
@@ -241,17 +235,14 @@
     "org/clojure/tools.reader/1.3.6/tools.reader-1.3.6.pom": {
       "sha256": "aef5ee828b7cb14a1c58f45b9f8a10ff340c5769925ea0ef5c35d1e49d920bea"
     },
-    "org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar": {
-      "sha256": "3fb71231afd098bb0f93f5eb97aa8291c8d0556379125e596f92ec8f944c6162"
+    "org/junit/junit-bom/5.14.1/junit-bom-5.14.1.pom": {
+      "sha256": "01b01dfa366550b40ac5760548a7d728b6109d17c451e83864d1e5e0ce862c94"
     },
-    "org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.pom": {
-      "sha256": "5ab1956fe8c45f35d46a5e47f320744d9fc4f5857cda9311b37189c5d353da0f"
+    "org/msgpack/msgpack-core/0.9.11/msgpack-core-0.9.11.jar": {
+      "sha256": "031b780833e8766fecb2af629bc04f2eb5d2c2b1e17475b9b6b8a81f932aea31"
     },
-    "org/msgpack/msgpack/0.6.12/msgpack-0.6.12.jar": {
-      "sha256": "e09ca65d8520488e80a5dc426848a8afccfd40f4a2eb3b9646042595d3bd9b5e"
-    },
-    "org/msgpack/msgpack/0.6.12/msgpack-0.6.12.pom": {
-      "sha256": "94497d8f02f8de8159a5b7d5136e010f57f5d9ac65886112eced8695c5056dee"
+    "org/msgpack/msgpack-core/0.9.11/msgpack-core-0.9.11.pom": {
+      "sha256": "526f1f95da77f76f8f789293d46ad96f9e0dd788495e99e73bc3e177ff7a0c50"
     },
     "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar": {
       "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
@@ -261,9 +252,6 @@
     },
     "org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom": {
       "sha256": "bb388d37fbcdd3cde64c3cede21838693218dc451f04040c5df360a78ed7e812"
-    },
-    "org/sonatype/oss/oss-parent/7/oss-parent-7.pom": {
-      "sha256": "b51f8867c92b6a722499557fc3a1fdea77bdf9ef574722fe90ce436a29559454"
     },
     "org/tcrawley/dynapath/1.1.0/dynapath-1.1.0.jar": {
       "sha256": "9fc7aa3be6385da3ad22a06526f15a5d335d9e89d40f39bf2f9a00e0bbbd8ae8"
