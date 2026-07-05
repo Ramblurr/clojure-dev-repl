@@ -1,7 +1,7 @@
 {:paths ["src"]
  :aliases
  {:test {:extra-paths ["test"]
-         :extra-deps  {djblue/portal       {:mvn/version "0.65.0"}
+         :extra-deps  {djblue/portal       {:mvn/version "0.66.0"}
                        lambdaisland/ansi   {:mvn/version "0.2.37"}
                        lambdaisland/kaocha {:mvn/version "1.91.1392"}}
          :main-opts   ["-m" "kaocha.runner"]}}}
