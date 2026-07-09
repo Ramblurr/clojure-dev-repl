@@ -6,3 +6,4 @@ tmp/
 .cpcache
 .lsp
 .nrepl-port
+.direnv

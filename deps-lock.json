@@ -67,11 +67,11 @@
     "com/sun/activation/all/1.2.0/all-1.2.0.pom": {
       "sha256": "1d8518e3ac7532a104e4f7be77def37c982e530723c6bdb3d67708cce2b0c2c4"
     },
-    "djblue/portal/0.65.0/portal-0.65.0.jar": {
-      "sha256": "92cdd3f72489642d5235b2d8d0e3af5db12d39298360b9c752a507701da97f08"
+    "djblue/portal/0.66.0/portal-0.66.0.jar": {
+      "sha256": "1e7e860f91176094a88f4bc9db84cbefa64553d07e77b68937b97fa6f921850d"
     },
-    "djblue/portal/0.65.0/portal-0.65.0.pom": {
-      "sha256": "067a6fc860238bd09bae1e34f38d1b9e05c1a4706f1e53f22c8140fde56c4781"
+    "djblue/portal/0.66.0/portal-0.66.0.pom": {
+      "sha256": "d385ac85784dbaeffb0f49745f5c222546dac1058b672690ad66c1746c51aec8"
     },
     "expound/expound/0.9.0/expound-0.9.0.jar": {
       "sha256": "d6a372609918e0351bfa6a8bd693d18bc199e8ba7aafaec11e895afae018f95c"
